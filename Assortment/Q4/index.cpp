@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
 
- int r,row,c,i,j;
+ int r,row,c,col,i,j;
 
     cout << "Enter arr Row: ";
     cin >>r;
@@ -40,6 +40,26 @@ int main(){
     }
 
     cout <<endl<<"The Sum Of Row "<<row<<":"<<sum<<endl;
+   
+     cout << endl;
+
+    cout<<"Enter Col Numer: ";
+    cin>>col;
+
+     sum=0;
+
+     cout << "col " << col <<": ";
+
+    for(i=0; i<r; i++){
+        for(j=0; j<c; j++){
+            if(j==col){
+                sum +=arr[i][j];
+                cout<<arr[i][j]<<" ";
+            }
+        }
+    }
+
+    cout <<endl<<"The Sum Of Col "<<col<<":"<<sum<<endl;
 
 
     return 0;
